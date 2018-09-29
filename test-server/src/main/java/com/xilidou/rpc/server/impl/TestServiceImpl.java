@@ -11,7 +11,7 @@ public class TestServiceImpl implements IHelloService {
 
     @Override
     public String sayHi(String name) {
-        log.info(name);
+//        log.info(name);
         return "Hello " + name;
     }
 }
