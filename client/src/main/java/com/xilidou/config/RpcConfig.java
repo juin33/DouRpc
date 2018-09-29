@@ -4,6 +4,8 @@ import com.xilidou.annotation.RpcInterface;
 import com.xilidou.proxy.ProxyFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.reflections.Reflections;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -30,6 +32,8 @@ import java.util.Set;
 public class RpcConfig implements ApplicationContextAware,InitializingBean {
 
 	private ApplicationContext applicationContext;
+
+	private static final Logger log = LoggerFactory.getLogger(RpcConfig.class);
 
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
